@@ -10,6 +10,12 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ContatosRouteImport } from './routes/contatos'
+import { Route as ProcessoSeletivoRouteImport } from './routes/processo-seletivo'
+import { Route as QuemSomosRouteImport } from './routes/quem-somos'
+import { Route as ForumIndexRouteImport } from './routes/forum.index'
+import { Route as ForumIdRouteImport } from './routes/forum.$id'
+import { Route as ForumNovaRouteImport } from './routes/forum.nova'
 import { Route as PaisesIndexRouteImport } from './routes/paises.index'
 import { Route as PaisesIdRouteImport } from './routes/paises.$id'
 import { Route as UniversidadesIndexRouteImport } from './routes/universidades.index'
@@ -18,6 +24,36 @@ import { Route as UniversidadesIdRouteImport } from './routes/universidades.$id'
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContatosRoute = ContatosRouteImport.update({
+  id: '/contatos',
+  path: '/contatos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProcessoSeletivoRoute = ProcessoSeletivoRouteImport.update({
+  id: '/processo-seletivo',
+  path: '/processo-seletivo',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const QuemSomosRoute = QuemSomosRouteImport.update({
+  id: '/quem-somos',
+  path: '/quem-somos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ForumIndexRoute = ForumIndexRouteImport.update({
+  id: '/forum/',
+  path: '/forum/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ForumIdRoute = ForumIdRouteImport.update({
+  id: '/forum/$id',
+  path: '/forum/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ForumNovaRoute = ForumNovaRouteImport.update({
+  id: '/forum/nova',
+  path: '/forum/nova',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PaisesIndexRoute = PaisesIndexRouteImport.update({
@@ -43,45 +79,96 @@ const UniversidadesIdRoute = UniversidadesIdRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contatos': typeof ContatosRoute
+  '/processo-seletivo': typeof ProcessoSeletivoRoute
+  '/quem-somos': typeof QuemSomosRoute
+  '/forum/$id': typeof ForumIdRoute
+  '/forum/nova': typeof ForumNovaRoute
   '/paises/$id': typeof PaisesIdRoute
   '/universidades/$id': typeof UniversidadesIdRoute
+  '/forum/': typeof ForumIndexRoute
   '/paises/': typeof PaisesIndexRoute
   '/universidades/': typeof UniversidadesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contatos': typeof ContatosRoute
+  '/processo-seletivo': typeof ProcessoSeletivoRoute
+  '/quem-somos': typeof QuemSomosRoute
+  '/forum/$id': typeof ForumIdRoute
+  '/forum/nova': typeof ForumNovaRoute
   '/paises/$id': typeof PaisesIdRoute
   '/universidades/$id': typeof UniversidadesIdRoute
+  '/forum': typeof ForumIndexRoute
   '/paises': typeof PaisesIndexRoute
   '/universidades': typeof UniversidadesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contatos': typeof ContatosRoute
+  '/processo-seletivo': typeof ProcessoSeletivoRoute
+  '/quem-somos': typeof QuemSomosRoute
+  '/forum/$id': typeof ForumIdRoute
+  '/forum/nova': typeof ForumNovaRoute
   '/paises/$id': typeof PaisesIdRoute
   '/universidades/$id': typeof UniversidadesIdRoute
+  '/forum/': typeof ForumIndexRoute
   '/paises/': typeof PaisesIndexRoute
   '/universidades/': typeof UniversidadesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/paises/$id' | '/universidades/$id' | '/paises/' | '/universidades/'
+    | '/'
+    | '/contatos'
+    | '/processo-seletivo'
+    | '/quem-somos'
+    | '/forum/$id'
+    | '/forum/nova'
+    | '/paises/$id'
+    | '/universidades/$id'
+    | '/forum/'
+    | '/paises/'
+    | '/universidades/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/paises/$id' | '/universidades/$id' | '/paises' | '/universidades'
+  to:
+    | '/'
+    | '/contatos'
+    | '/processo-seletivo'
+    | '/quem-somos'
+    | '/forum/$id'
+    | '/forum/nova'
+    | '/paises/$id'
+    | '/universidades/$id'
+    | '/forum'
+    | '/paises'
+    | '/universidades'
   id:
     | '__root__'
     | '/'
+    | '/contatos'
+    | '/processo-seletivo'
+    | '/quem-somos'
+    | '/forum/$id'
+    | '/forum/nova'
     | '/paises/$id'
     | '/universidades/$id'
+    | '/forum/'
     | '/paises/'
     | '/universidades/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContatosRoute: typeof ContatosRoute
+  ProcessoSeletivoRoute: typeof ProcessoSeletivoRoute
+  QuemSomosRoute: typeof QuemSomosRoute
+  ForumIdRoute: typeof ForumIdRoute
+  ForumNovaRoute: typeof ForumNovaRoute
   PaisesIdRoute: typeof PaisesIdRoute
   UniversidadesIdRoute: typeof UniversidadesIdRoute
+  ForumIndexRoute: typeof ForumIndexRoute
   PaisesIndexRoute: typeof PaisesIndexRoute
   UniversidadesIndexRoute: typeof UniversidadesIndexRoute
 }
@@ -93,6 +180,48 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contatos': {
+      id: '/contatos'
+      path: '/contatos'
+      fullPath: '/contatos'
+      preLoaderRoute: typeof ContatosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/processo-seletivo': {
+      id: '/processo-seletivo'
+      path: '/processo-seletivo'
+      fullPath: '/processo-seletivo'
+      preLoaderRoute: typeof ProcessoSeletivoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/quem-somos': {
+      id: '/quem-somos'
+      path: '/quem-somos'
+      fullPath: '/quem-somos'
+      preLoaderRoute: typeof QuemSomosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/forum/': {
+      id: '/forum/'
+      path: '/forum'
+      fullPath: '/forum/'
+      preLoaderRoute: typeof ForumIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/forum/$id': {
+      id: '/forum/$id'
+      path: '/forum/$id'
+      fullPath: '/forum/$id'
+      preLoaderRoute: typeof ForumIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/forum/nova': {
+      id: '/forum/nova'
+      path: '/forum/nova'
+      fullPath: '/forum/nova'
+      preLoaderRoute: typeof ForumNovaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/paises/': {
@@ -128,8 +257,14 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContatosRoute: ContatosRoute,
+  ProcessoSeletivoRoute: ProcessoSeletivoRoute,
+  QuemSomosRoute: QuemSomosRoute,
+  ForumIdRoute: ForumIdRoute,
+  ForumNovaRoute: ForumNovaRoute,
   PaisesIdRoute: PaisesIdRoute,
   UniversidadesIdRoute: UniversidadesIdRoute,
+  ForumIndexRoute: ForumIndexRoute,
   PaisesIndexRoute: PaisesIndexRoute,
   UniversidadesIndexRoute: UniversidadesIndexRoute,
 }

@@ -49,7 +49,7 @@ const banners = [
 
 function Index() {
   const [slide, setSlide] = useState(0);
-  const banner = banners[slide];
+  const banner = banners[slide] ?? banners[0]!;
 
   return (
     <Layout>
