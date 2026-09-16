@@ -447,7 +447,6 @@ export const universidades: Universidade[] = [
     custos: ["Isenção de mensalidade por convênio", "Custo de vida de US$700/mês"],
     bolsas: ["Bolsa de mobilidade PUC-Rio"],
     documentacao: ["Histórico escolar", "Passaporte"],
-    contax: undefined as never,
     contato: "movilidad@uchile.cl",
     programas: [
       {
