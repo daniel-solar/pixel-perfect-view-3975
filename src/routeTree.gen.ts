@@ -10,33 +10,80 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as PaisesIndexRouteImport } from './routes/paises.index'
+import { Route as PaisesIdRouteImport } from './routes/paises.$id'
+import { Route as UniversidadesIndexRouteImport } from './routes/universidades.index'
+import { Route as UniversidadesIdRouteImport } from './routes/universidades.$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PaisesIndexRoute = PaisesIndexRouteImport.update({
+  id: '/paises/',
+  path: '/paises/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PaisesIdRoute = PaisesIdRouteImport.update({
+  id: '/paises/$id',
+  path: '/paises/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UniversidadesIndexRoute = UniversidadesIndexRouteImport.update({
+  id: '/universidades/',
+  path: '/universidades/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const UniversidadesIdRoute = UniversidadesIdRouteImport.update({
+  id: '/universidades/$id',
+  path: '/universidades/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/paises/$id': typeof PaisesIdRoute
+  '/universidades/$id': typeof UniversidadesIdRoute
+  '/paises/': typeof PaisesIndexRoute
+  '/universidades/': typeof UniversidadesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/paises/$id': typeof PaisesIdRoute
+  '/universidades/$id': typeof UniversidadesIdRoute
+  '/paises': typeof PaisesIndexRoute
+  '/universidades': typeof UniversidadesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/paises/$id': typeof PaisesIdRoute
+  '/universidades/$id': typeof UniversidadesIdRoute
+  '/paises/': typeof PaisesIndexRoute
+  '/universidades/': typeof UniversidadesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    '/' | '/paises/$id' | '/universidades/$id' | '/paises/' | '/universidades/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/paises/$id' | '/universidades/$id' | '/paises' | '/universidades'
+  id:
+    | '__root__'
+    | '/'
+    | '/paises/$id'
+    | '/universidades/$id'
+    | '/paises/'
+    | '/universidades/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  PaisesIdRoute: typeof PaisesIdRoute
+  UniversidadesIdRoute: typeof UniversidadesIdRoute
+  PaisesIndexRoute: typeof PaisesIndexRoute
+  UniversidadesIndexRoute: typeof UniversidadesIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +95,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/paises/': {
+      id: '/paises/'
+      path: '/paises'
+      fullPath: '/paises/'
+      preLoaderRoute: typeof PaisesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/paises/$id': {
+      id: '/paises/$id'
+      path: '/paises/$id'
+      fullPath: '/paises/$id'
+      preLoaderRoute: typeof PaisesIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/universidades/': {
+      id: '/universidades/'
+      path: '/universidades'
+      fullPath: '/universidades/'
+      preLoaderRoute: typeof UniversidadesIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/universidades/$id': {
+      id: '/universidades/$id'
+      path: '/universidades/$id'
+      fullPath: '/universidades/$id'
+      preLoaderRoute: typeof UniversidadesIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  PaisesIdRoute: PaisesIdRoute,
+  UniversidadesIdRoute: UniversidadesIdRoute,
+  PaisesIndexRoute: PaisesIndexRoute,
+  UniversidadesIndexRoute: UniversidadesIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
