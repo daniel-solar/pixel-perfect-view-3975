@@ -9,13 +9,13 @@ import heroImg from "@/assets/hero.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "PUC GLOBAL | Intercâmbio acadêmico da PUC-Rio" },
+      { title: "RotaPUC | Intercâmbio acadêmico da PUC-Rio" },
       {
         name: "description",
         content:
           "Encontre universidades parceiras, países de destino, prazos do processo seletivo e a comunidade de intercâmbio da PUC-Rio.",
       },
-      { property: "og:title", content: "PUC GLOBAL | Intercâmbio PUC-Rio" },
+      { property: "og:title", content: "RotaPUC | Intercâmbio PUC-Rio" },
       {
         property: "og:description",
         content:

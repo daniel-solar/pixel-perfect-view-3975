@@ -6,7 +6,7 @@ import { faq, processoSeletivo } from "@/data/puc";
 export const Route = createFileRoute("/processo-seletivo")({
   head: () => ({
     meta: [
-      { title: "Processo seletivo de intercâmbio | PUC GLOBAL" },
+      { title: "Processo seletivo de intercâmbio | RotaPUC" },
       {
         name: "description",
         content:
@@ -14,7 +14,7 @@ export const Route = createFileRoute("/processo-seletivo")({
       },
       {
         property: "og:title",
-        content: "Processo seletivo de intercâmbio | PUC GLOBAL",
+        content: "Processo seletivo de intercâmbio | RotaPUC",
       },
       {
         property: "og:description",

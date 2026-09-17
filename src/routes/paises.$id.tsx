@@ -14,12 +14,12 @@ export const Route = createFileRoute("/paises/$id")({
     const nome = loaderData?.pais.nome ?? "País";
     return {
       meta: [
-        { title: `${nome} | Destinos PUC GLOBAL` },
+        { title: `${nome} | Destinos RotaPUC` },
         {
           name: "description",
           content: `Idioma, moeda, fuso-horário, requisitos de entrada e universidades conveniadas para intercâmbio na ${nome}.`,
         },
-        { property: "og:title", content: `${nome} | Destinos PUC GLOBAL` },
+        { property: "og:title", content: `${nome} | Destinos RotaPUC` },
         {
           property: "og:description",
           content: `Guia completo de intercâmbio para ${nome}.`,

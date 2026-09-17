@@ -9,13 +9,13 @@ import { cursosDisponiveis, paises, universidades } from "@/data/puc";
 export const Route = createFileRoute("/universidades/")({
   head: () => ({
     meta: [
-      { title: "Universidades parceiras | PUC GLOBAL" },
+      { title: "Universidades parceiras | RotaPUC" },
       {
         name: "description",
         content:
           "Busque universidades conveniadas da PUC-Rio e filtre por continente, idioma, nível, duração, curso e tipo de intercâmbio.",
       },
-      { property: "og:title", content: "Universidades parceiras | PUC GLOBAL" },
+      { property: "og:title", content: "Universidades parceiras | RotaPUC" },
       {
         property: "og:description",
         content: "Busca e filtros das universidades conveniadas da PUC-Rio.",

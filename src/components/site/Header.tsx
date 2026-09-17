@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import { Globe, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import { RotaPucLogo } from "./RotaPucLogo";
 
 const navItems = [
   { label: "Início", to: "/" },
@@ -21,11 +22,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6">
-        <Link to="/" className="flex items-center gap-2 text-brand-dark">
-          <span className="flex size-10 items-center justify-center rounded-full bg-brand text-white">
-            <Globe className="size-5" aria-hidden="true" />
-          </span>
-          <span className="text-lg font-bold tracking-tight">PUC GLOBAL</span>
+        <Link to="/" aria-label="RotaPUC — início" className="text-brand-dark">
+          <RotaPucLogo />
         </Link>
 
         <nav aria-label="Navegação principal" className="hidden lg:block">

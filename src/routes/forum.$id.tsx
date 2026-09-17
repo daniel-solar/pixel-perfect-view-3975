@@ -16,13 +16,13 @@ import {
 export const Route = createFileRoute("/forum/$id")({
   head: () => ({
     meta: [
-      { title: "Discussão do fórum | PUC GLOBAL" },
+      { title: "Discussão do fórum | RotaPUC" },
       {
         name: "description",
         content:
           "Leia a discussão completa, respostas da comunidade e contribua com sua experiência de intercâmbio.",
       },
-      { property: "og:title", content: "Discussão do fórum | PUC GLOBAL" },
+      { property: "og:title", content: "Discussão do fórum | RotaPUC" },
       {
         property: "og:description",
         content: "Respostas e comentários da comunidade de intercâmbio da PUC-Rio.",
