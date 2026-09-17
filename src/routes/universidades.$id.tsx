@@ -17,12 +17,12 @@ export const Route = createFileRoute("/universidades/$id")({
     const nome = loaderData?.universidade.nome ?? "Universidade";
     return {
       meta: [
-        { title: `${nome} | PUC GLOBAL` },
+        { title: `${nome} | RotaPUC` },
         {
           name: "description",
           content: `Requisitos acadêmicos, programas, custos, bolsas e documentação para intercâmbio na ${nome}.`,
         },
-        { property: "og:title", content: `${nome} | PUC GLOBAL` },
+        { property: "og:title", content: `${nome} | RotaPUC` },
         {
           property: "og:description",
           content: `Informações completas sobre o convênio da PUC-Rio com a ${nome}.`,

@@ -7,13 +7,13 @@ import { addPost } from "@/lib/forum-store";
 export const Route = createFileRoute("/forum/nova")({
   head: () => ({
     meta: [
-      { title: "Nova pergunta no fórum | PUC GLOBAL" },
+      { title: "Nova pergunta no fórum | RotaPUC" },
       {
         name: "description",
         content:
           "Publique uma nova pergunta na comunidade de intercâmbio da PUC-Rio e receba respostas de outros alunos.",
       },
-      { property: "og:title", content: "Nova pergunta no fórum | PUC GLOBAL" },
+      { property: "og:title", content: "Nova pergunta no fórum | RotaPUC" },
       {
         property: "og:description",
         content: "Formule sua dúvida sobre intercâmbio para a comunidade PUC-Rio.",

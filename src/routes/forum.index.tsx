@@ -9,13 +9,13 @@ import { useForum } from "@/lib/forum-store";
 export const Route = createFileRoute("/forum/")({
   head: () => ({
     meta: [
-      { title: "Comunidade de Intercâmbio | PUC GLOBAL" },
+      { title: "Comunidade de Intercâmbio | RotaPUC" },
       {
         name: "description",
         content:
           "Fórum de perguntas do intercâmbio PUC-Rio: tire dúvidas sobre matrícula, vistos, proficiência e vida no destino.",
       },
-      { property: "og:title", content: "Comunidade de Intercâmbio | PUC GLOBAL" },
+      { property: "og:title", content: "Comunidade de Intercâmbio | RotaPUC" },
       {
         property: "og:description",
         content: "Perguntas e respostas entre alunos e ex-intercambistas da PUC-Rio.",

@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "PUC GLOBAL | Intercâmbio PUC-Rio" },
+      { title: "RotaPUC | Intercâmbio acadêmico" },
       {
         name: "description",
         content:
           "Plataforma de apoio ao intercâmbio acadêmico dos alunos da PUC-Rio.",
       },
       { name: "author", content: "PUC-Rio · CCCI" },
-      { property: "og:title", content: "PUC GLOBAL | Intercâmbio PUC-Rio" },
+      { property: "og:title", content: "RotaPUC | Intercâmbio acadêmico" },
       {
         property: "og:description",
         content:

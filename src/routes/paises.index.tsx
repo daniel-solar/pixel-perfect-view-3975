@@ -9,13 +9,13 @@ import { paises } from "@/data/puc";
 export const Route = createFileRoute("/paises/")({
   head: () => ({
     meta: [
-      { title: "Países parceiros | PUC GLOBAL" },
+      { title: "Países parceiros | RotaPUC" },
       {
         name: "description",
         content:
           "Conheça os países de destino do intercâmbio da PUC-Rio, agrupados por continente, com universidades conveniadas.",
       },
-      { property: "og:title", content: "Países parceiros | PUC GLOBAL" },
+      { property: "og:title", content: "Países parceiros | RotaPUC" },
       {
         property: "og:description",
         content: "Guia de destinos do intercâmbio acadêmico da PUC-Rio.",

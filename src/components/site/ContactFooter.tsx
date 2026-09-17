@@ -57,7 +57,7 @@ export function ContactFooter() {
         </ul>
 
         <p className="mt-8 text-center text-xs text-muted-foreground">
-          Protótipo acadêmico PUC GLOBAL — conteúdo demonstrativo, não oficial.
+          Protótipo acadêmico RotaPUC — conteúdo demonstrativo, não oficial.
         </p>
       </div>
     </footer>

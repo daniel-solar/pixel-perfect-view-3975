@@ -5,16 +5,16 @@ import { Pill } from "@/components/site/ui";
 export const Route = createFileRoute("/quem-somos")({
   head: () => ({
     meta: [
-      { title: "Quem somos | PUC GLOBAL" },
+      { title: "Quem somos | RotaPUC" },
       {
         name: "description",
         content:
-          "Seção institucional do PUC GLOBAL em elaboração: o conteúdo será publicado pela coordenação de intercâmbio.",
+          "Seção institucional do RotaPUC em elaboração: o conteúdo será publicado pela coordenação de intercâmbio.",
       },
-      { property: "og:title", content: "Quem somos | PUC GLOBAL" },
+      { property: "og:title", content: "Quem somos | RotaPUC" },
       {
         property: "og:description",
-        content: "Conteúdo institucional do PUC GLOBAL em elaboração.",
+        content: "Conteúdo institucional do RotaPUC em elaboração.",
       },
     ],
   }),
@@ -30,7 +30,7 @@ function QuemSomos() {
           Conteúdo institucional pendente
         </h1>
         <p className="mt-4 max-w-2xl text-base text-muted-foreground">
-          Esta página faz parte da navegação do PUC GLOBAL, mas o conteúdo
+          Esta página faz parte da navegação do RotaPUC, mas o conteúdo
           institucional ainda não foi definido. O texto será fornecido pela
           coordenação e publicado aqui, mantendo o mesmo padrão visual das demais
           páginas.

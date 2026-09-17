@@ -6,13 +6,13 @@ import { contato } from "@/data/puc";
 export const Route = createFileRoute("/contatos")({
   head: () => ({
     meta: [
-      { title: "Contatos da coordenação | PUC GLOBAL" },
+      { title: "Contatos da coordenação | RotaPUC" },
       {
         name: "description",
         content:
           "Endereço, e-mails, telefone, Instagram e horário de atendimento da coordenação de intercâmbio da PUC-Rio.",
       },
-      { property: "og:title", content: "Contatos da coordenação | PUC GLOBAL" },
+      { property: "og:title", content: "Contatos da coordenação | RotaPUC" },
       {
         property: "og:description",
         content: "Fale com a CCCI, coordenação de intercâmbio da PUC-Rio.",
