@@ -11,10 +11,26 @@ const blocos = [
 ];
 
 const redes = [
-  { label: "Instagram", Icon: Instagram },
-  { label: "Facebook", Icon: Facebook },
-  { label: "YouTube", Icon: Youtube },
-  { label: "Site oficial", Icon: Globe },
+  {
+    label: "Instagram da CCCI PUC-Rio",
+    href: "https://www.instagram.com/puc_rio_intercambio/",
+    Icon: Instagram,
+  },
+  {
+    label: "Facebook da CCCI PUC-Rio",
+    href: "https://www.facebook.com/PUC-Rio-Interc%C3%A2mbio-828185920564160",
+    Icon: Facebook,
+  },
+  {
+    label: "YouTube da PUC-Rio",
+    href: "https://www.youtube.com/pucriooficial",
+    Icon: Youtube,
+  },
+  {
+    label: "Site oficial da CCCI PUC-Rio",
+    href: "https://www.puc-rio.br/ensinopesq/ccci/",
+    Icon: Globe,
+  },
 ];
 
 export function ContactFooter() {
@@ -41,12 +57,12 @@ export function ContactFooter() {
         </dl>
 
         <ul className="mt-10 flex justify-center gap-4">
-          {redes.map(({ label, Icon }) => (
+          {redes.map(({ label, href, Icon }) => (
             <li key={label}>
               <a
-                href="https://www.puc-rio.br"
+                href={href}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 aria-label={label}
                 className="flex size-11 items-center justify-center rounded-full bg-brand text-white transition-colors hover:bg-brand-dark focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-dark"
               >
