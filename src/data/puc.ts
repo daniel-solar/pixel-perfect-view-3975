@@ -927,12 +927,17 @@ export const faq = [
 
 export const contato = {
   endereco: [
-    "R. Marquês de São Vicente, 225",
+    "Rua Marquês de São Vicente, 225",
     "Gávea, Rio de Janeiro - RJ",
-    "Edifício Padre Leonel Franca",
+    "Edifício Cardeal Leme, Sala 130",
   ],
-  email: ["central-pucglobal@puc-rio.br", "duvidas.exchange@puc-rio.br"],
-  telefone: ["+55 21 3527-1000", "Ramal 1543 / 1544"],
-  instagram: ["@pucglorio", "@ccci.pucrio"],
-  horario: ["Segunda a Sexta-feira", "Das 09:00 às 12:00", "Das 14:00 às 17:00"],
+  email: [
+    "ccci-puc@puc-rio.br",
+    "info.ccci@puc-rio.br",
+    "intercambio@puc-rio.br",
+  ],
+  telefone: ["+55 (21) 3527-1577", "+55 (21) 3527-1578", "Fax: ramal 1579"],
+  instagram: ["@ccci_pucrio", "#PUCRioIntercambio", "Updates e editais ativos"],
+  horario: ["Segunda a Sexta-feira", "9h00 às 12h00", "14h00 às 17h00"],
 };
+
